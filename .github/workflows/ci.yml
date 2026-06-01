@@ -1,0 +1,51 @@
+name: CodeAid CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install streamlit requests radon pandas plotly astor numpy scikit-learn
+      - name: Validate syntax
+        run: |
+          python -c "
+          import ast, os
+          errors = []
+          for root, dirs, files in os.walk('.'):
+              dirs[:] = [d for d in dirs if d not in ['venv','__pycache__','.git']]
+              for f in files:
+                  if f.endswith('.py'):
+                      path = os.path.join(root, f)
+                      try:
+                          ast.parse(open(path).read())
+                      except SyntaxError as e:
+                          errors.append(f'{path}: {e}')
+          if errors:
+              [print(e) for e in errors]
+              exit(1)
+          print('All files valid')
+          "
+      - name: Validate imports
+        run: |
+          python -c "
+          import sys
+          sys.path.insert(0, '.')
+          from core.repo_loader import load_from_github, load_from_zip
+          from agents.scanner import ScannerAgent
+          from agents.repair import RepairAgent
+          from agents.verifier import VerifierAgent
+          from agents.coordinator import Coordinator
+          from agents.project_understanding import ProjectUnderstandingAgent
+          from utils.metrics import build_metrics_display
+          print('All imports valid')
+          "
