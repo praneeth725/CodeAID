@@ -1,6 +1,6 @@
 <div align="center">
 
-# ? CodeAid
+# CodeAID
 
 ### AI-Powered Static Code Analysis & Project Understanding System
 
@@ -9,17 +9,17 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square)](LICENSE)
 [![CI](https://github.com/praneeth725/CodeAid/actions/workflows/ci.yml/badge.svg)](https://github.com/praneeth725/CodeAid/actions)
 
-**Drop any Python repository. Get a complete picture — issues, repairs, architecture, and AI-powered insights — in seconds.**
+**Drop any Python repository. Get a complete picture â€” issues, repairs, architecture, and AI-powered insights â€” in seconds.**
 
-[View Demo](https://github.com/praneeth725/CodeAid) · [Report Bug](https://github.com/praneeth725/CodeAid/issues) · [Request Feature](https://github.com/praneeth725/CodeAid/issues)
+[View Demo](https://github.com/praneeth725/CodeAid) Â· [Report Bug](https://github.com/praneeth725/CodeAid/issues) Â· [Request Feature](https://github.com/praneeth725/CodeAid/issues)
 
 </div>
 
 ---
 
-## What is CodeAid?
+## What is CodeAID?
 
-CodeAid is a multi-agent AI system that ingests a Python repository and runs it through a coordinated pipeline of six specialized agents — delivering a complete code quality workflow through a single interactive dashboard. No code is ever executed. All analysis is static and safe.
+CodeAID is a multi-agent AI system that ingests a Python repository and runs it through a coordinated pipeline of six specialized agents â€” delivering a complete code quality workflow through a single interactive dashboard. No code is ever executed. All analysis is static and safe.
 
 Built as a Final Year Capstone Project at GITAM (Deemed to be University), Hyderabad.
 
@@ -41,11 +41,11 @@ Built as a Final Year Capstone Project at GITAM (Deemed to be University), Hyder
 
 ## Issues Detected
 
-- **Syntax Errors** — files that fail to parse
-- **Unused Imports** — with attribute-access fix (os.path.join correctly handled)
-- **Long Functions** — exceeding configurable line threshold
-- **Excess Parameters** — functions with too many arguments
-- **TODO / FIXME Comments** — unresolved technical debt markers
+- **Syntax Errors** â€” files that fail to parse
+- **Unused Imports** â€” with attribute-access fix (os.path.join correctly handled)
+- **Long Functions** â€” exceeding configurable line threshold
+- **Excess Parameters** â€” functions with too many arguments
+- **TODO / FIXME Comments** â€” unresolved technical debt markers
 
 ---
 
@@ -69,18 +69,18 @@ Open your browser at \http://localhost:8501\
 
 \\\
 CodeAid/
-+-- app.py                         # Streamlit dashboard — single scrollable page
++-- app.py                         # Streamlit dashboard â€” single scrollable page
 +-- requirements.txt               # All dependencies
 +-- core/
-¦   +-- repo_loader.py             # GitHub URL + ZIP loader
+Â¦   +-- repo_loader.py             # GitHub URL + ZIP loader
 +-- agents/
-¦   +-- scanner.py                 # AST-based issue detection
-¦   +-- repair.py                  # Safe auto-repair
-¦   +-- verifier.py                # Compile-check + rollback
-¦   +-- explain.py                 # Explanation generation
-¦   +-- llm_agent.py               # OpenAI / HuggingFace backends
-¦   +-- coordinator.py             # Pipeline orchestrator
-¦   +-- project_understanding.py  # Repository-level analysis
+Â¦   +-- scanner.py                 # AST-based issue detection
+Â¦   +-- repair.py                  # Safe auto-repair
+Â¦   +-- verifier.py                # Compile-check + rollback
+Â¦   +-- explain.py                 # Explanation generation
+Â¦   +-- llm_agent.py               # OpenAI / HuggingFace backends
+Â¦   +-- coordinator.py             # Pipeline orchestrator
+Â¦   +-- project_understanding.py  # Repository-level analysis
 +-- utils/
     +-- metrics.py                 # Precision, Recall, F1
     +-- codexglue_loader.py        # CodeXGLUE benchmark evaluation
@@ -88,7 +88,7 @@ CodeAid/
 
 ---
 
-## Evaluation — CodeXGLUE Benchmark
+## Evaluation â€” CodeXGLUE Benchmark
 
 | Metric | Score |
 |---|---|
@@ -112,11 +112,11 @@ CodeAid/
 
 ## Team
 
-| Name | Registration |
-|---|---|
-| Kushwanth Reddy | HU22CSEN0101618 |
-| Praneeth Salaka | HU22CSEN0100536 |
-| Vallabh Rahul | HU22CSEN0100173 |
+| Names |
+|---|
+| Kushwanth Reddy |
+| Praneeth Salaka |
+| Vallabh Rahul |
 
 **Guide:** Dr. Sreedhar Jinka, Associate Professor, Dept. of CSE
 **Institution:** GITAM (Deemed to be University), Hyderabad
@@ -125,4 +125,4 @@ CodeAid/
 
 ## License
 
-MIT © 2025 Kushwanth Reddy, Praneeth Salaka, Vallabh Rahul
+MIT Â© 2025 Kushwanth Reddy, Praneeth Salaka, Vallabh Rahul
