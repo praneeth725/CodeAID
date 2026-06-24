@@ -51,7 +51,7 @@ Built as a Final Year Capstone Project at GITAM (Deemed to be University), Hyder
 
 ## Quickstart
 
-\\\ash
+\\\Bash
 git clone https://github.com/praneeth725/CodeAid.git
 cd CodeAid
 python -m venv venv
