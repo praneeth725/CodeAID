@@ -103,7 +103,7 @@ CodeAid/
 
 - **Language:** Python 3.10+
 - **UI:** Streamlit
-- **Analysis:** Python \st\ module, Radon
+- **Analysis:** Python \ast\ module, Radon
 - **AI:** OpenAI GPT-3.5-turbo, HuggingFace CodeT5-small
 - **Evaluation:** CodeXGLUE (Devign dataset)
 - **Visualization:** Plotly, Pandas
